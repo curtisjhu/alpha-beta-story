@@ -4,17 +4,24 @@
   "license": "MIT",
   "type": "module",
   "idyll": {
-    "theme": "idyll",
-    "layout": "centered",
-    "css": "styles.css",
+    "theme": "tufte",
+    "layout": "blog",
     "authorView": false
+  },
+  "scripts": {
+    "start": "idyll index.idyll --defaultComponents=default --theme idyll --watch",
+    "build": "idyll build",
+    "deploy": "gh-pages -d ./build"
   },
   "dependencies": {
     "d3": "7",
     "d3-selection": "^2.0.0",
     "d3-transition": "^2.0.0",
     "idyll": "^6.0.0-alpha.6",
-    "idyll-d3-component": "^2.0.0"
+    "idyll-component-children": "^1.0.10",
+    "idyll-components": "^6.0.0-alpha.2",
+    "idyll-d3-component": "^2.0.0",
+    "scrollama": "^3.2.0"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"
